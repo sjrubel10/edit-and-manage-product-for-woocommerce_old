@@ -1,0 +1,19 @@
+{
+    "name": "woo-product-bulk-editor/rubel98",
+    "description": "Bulk Editor and Manage Product for WooCommerce",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Rubel98"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "wooBEMP\\" : "includes/"
+        }
+    },
+    "files": []
+}

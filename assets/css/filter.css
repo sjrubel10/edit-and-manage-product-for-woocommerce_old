@@ -1,0 +1,120 @@
+.searchHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: calc(100 - 20px) ;
+    padding: 10px;
+
+    background-color: #cccccc;
+    min-height: 600px;
+}
+
+.wooBEMPsearchoptionholder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.wooBEMPsearchHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: calc( 800px - 10px );
+    padding: 0px 5px 10px 5px;
+}
+
+.wooBEMPsearchContainer{
+    display: block;
+    float: left;
+    position: relative;
+    width: calc( 100% - 20px );
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #d3d0d0;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+}
+.wooBEMPsearchFields{
+    display: block;
+    float: left;
+    position: relative;
+    width:  170px ;
+    padding: 5px 20px 5px 5px;
+}
+.wooBEMPsearchCondition{
+    display: block;
+    float: left;
+    position: relative;
+    width: 135px;
+    padding: 5px 15px 5px 5px;
+}
+.wooBEMPsearchValue{
+    display: block;
+    float: left;
+    position: relative;
+    width:  calc( 100% - 380px);
+    padding: 5px 5px;
+}
+.addNewSearchOption{
+    display: block;
+    float: left;
+    width: 10px;
+    padding: 10px 5px 5px 5px;
+    cursor: pointer;
+}
+
+.wooBEMPinputTextField{
+    width: calc( 100% - 5px );
+    margin-left: 5px;
+}
+.wooBEMPsubmitBtnHolder{
+    display: block;
+    float: left;
+    position: relative;
+    padding: 5px;
+    width: calc( 100% - 10px );
+    text-align: center;
+}
+.wooBEMPsubmitBtn{
+    display: block;
+    float: left;
+    text-align: center;
+    border: 1px solid #c3c4c7;
+    /* width: 100px; */
+    padding: 10px 20px;
+    margin-right: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #06616d;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.wooBEMPsubmitBtn:hover{
+    background-color: #146262;
+    color: #FFFFFF;
+    border: 1px solid #1d5656;
+}
+.emptyProductextHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: calc( 100% - 20px );
+    padding: 10px;
+    text-align: center;
+}
+.emptyProductext{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.wp-core-ui select {
+    min-height: 35px;
+    border: 1px solid #d4dbe5;
+}
+input[type=text]{
+    border: 1px solid #d4dbe5;
+    min-height: 35px;
+}

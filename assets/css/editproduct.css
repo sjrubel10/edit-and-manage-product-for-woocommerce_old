@@ -1,0 +1,414 @@
+.table-container {
+    margin: 20px;
+}
+
+.myTableHolder{
+    display: block;
+    float: left;
+    width: calc( 100% - 5px );
+    margin-left: 5px;
+    overflow: hidden;
+}
+#myTable {
+    display: block;
+    float: left;
+    position: relative;
+    width: auto;
+    border-collapse: collapse;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.tableHeader {
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0a4b82;
+}
+
+.wooBEMOtd{
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.wooBEMPwidth{
+    /*border: 1px solid #ccc;*/
+    min-width: 120px;
+}
+.productTitle_width{
+    min-width: 250px;
+}
+.productaction_width{
+    min-width: 200px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.filteholder{
+    display: block;
+    float: left;
+    position: relative;
+    width: calc( 100% - 120px);
+}
+.wooBEMPLimitTextHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 120px;
+}
+.wooBEMPLimitText{
+     display: block;
+     float: left;
+     padding: 20px 0px;
+     width: calc( 100% - 20px );
+     text-align: center;
+     border: 1px solid #e1dcdc;
+     cursor: pointer;
+     font-size: 15px;
+ }
+.wooBEMPInputLimitText{
+     display: block;
+     float: left;
+     margin-top: 20px;
+     width: calc( 100% - 20px );
+     text-align: center;
+     border: 1px solid #e1dcdc;
+     cursor: pointer;
+ }
+.wooBEMP_productAttribute {
+    cursor: pointer;
+    /*min-width: 160px;*/
+}
+.wooBEMP_productAttributeOption {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #444444;
+    border-radius: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #dde1e1;
+    /*min-width: 160px;*/
+}
+.wooBEMP_productAttributeOption:hover {
+    /*background-color: yellow;*/
+    background-color: #4f5051;
+    color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(83, 100, 255, 0.45);
+}
+.submit_btn{
+    display: block;
+    float: left;
+    /* width: 100px; */
+    text-align: left;
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container {
+    display: block;
+    float: left;
+    position: absolute;
+    z-index: 9;
+    width: 300px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #d8cfcf;
+}
+
+/* Style for the text field */
+.text-field {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style for the buttons */
+.btn-container {
+    text-align: center;
+}
+
+.submit-btn, .cancel-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+textarea {
+    color:#f2b702;
+}
+
+.wooBEMPMenuHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100% ;
+    margin-bottom: 10px;
+}
+.wooBEMPClickMenu{
+    display: block;
+    float: left;
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 8px;
+    text-align: center;
+    border: 1px solid #dcd5d5;
+    font-size: 18px;
+}
+.wooBEMPClickMenuSelected{
+    background-color: #0a4b82;
+    color: #FFFFFF;
+}
+.borderRadiourLeft{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+}
+.borderRadiourRight{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+
+.filterContainerHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    padding: 5px;
+}
+.wooBEMPloadmoreButtonHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    padding: 20px 0px;
+}
+.wooBEMPbuttonHolder{
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.wooBEMPdescriptionsubmit{
+    display: block;
+    position: relative;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #0a82df;
+    color: #FFFFFF;
+    float: right;
+    margin: 10px 10px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.wooBEMPdescriptionclose{
+    display: block;
+    float: right;
+    position: relative;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #990000;
+    color: #f3f3f3;
+    margin: 10px 10px;
+    border-radius: 2px;
+    font-size: 16px;
+}
+.wooBEMPloadmorebtn{
+    display: block;
+    /* float: left; */
+    position: relative;
+    width: 200px;
+    margin: auto;
+    padding: 10px 0px;
+    text-align: center;
+    background-color: rgba(79,148,212,.8);
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #4f94d4;
+}
+.columnContainer{
+    display: block;
+    float: left;
+    padding: 10px 40px;
+}
+
+.wooBEMPsettings{
+    display: block;
+    float: left;
+    padding: 10px 20px;
+}
+.columnCheckbox{
+    margin: 0px;
+}
+.wooBEMPColumnSettingBtnHolder{
+    display: block;
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+
+}
+.wooBEMPColumnSettingBtn{
+    cursor: pointer;
+    padding: 8px 15px;
+    background-color: #0a82df;
+    border-radius: 3px;
+    color: #f3f3f3;
+    font-size: 16px;
+}
+.wooBEMPColumnSettingBtn:hover{
+    background-color: #045899;
+    color: #f3f3f3;
+}
+
+.wooBEMP_clasic_editor_holder{
+    display: block;
+    float: left;
+    position: fixed;
+    width: calc(100% - 160px);
+    z-index: 100;
+    height: 100%;
+    background-color: #332f2fdb;
+    top: 32px;
+    left: 160px;
+    cursor: pointer;
+}
+.wooBEMP_clasic_editor{
+    display: block;
+    float: left;
+    position: absolute;
+    width: calc(100% - 160px);
+    height: auto;
+    margin: 0px 75px;
+    z-index: 99999;
+    top: 100px;
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+.wooBEMPaction{
+    display: block;
+    float: left;
+    position: relative;
+    padding: 3px 2px;
+    cursor: pointer;
+    margin-left: 3px;
+    /*border: 1px solid #ebe3e3;*/
+}
+.wooBEMPaction:hover{
+    text-decoration: underline;
+}
+.wooBEMPTrash{
+    color: #d33e3e;
+}
+.wooBEMPpTrash{
+    color: #990000;
+}
+.wooBEMPseparator{
+    display: block;
+    float: left;
+    position: relative;
+    top: 1px;
+    padding: 2px;
+    color: #0a0a0a;
+    /*font-weight: bold;*/
+}
+
+
+
+.popup-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+/* Styles for the popup box */
+.popup-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: block;
+    float: right;
+}
+/* Styles for the buttons */
+.popup-buttons {
+    margin-top: 20px;
+}
+/* Styles for the Yes and No buttons */
+.popup-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.wooBEMPconfirmationText{
+    display: block;
+    float: right;
+    position: relative;
+    padding: 5px 30px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.sliderholder{
+    display: block;
+    position: fixed;
+    bottom: 25px;
+    right: 5px;
+    width: 600px;
+    height: 32px;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.slider{
+    display: block;
+    float: left;
+    width: 300px;
+    height: 24px;
+    margin-top: 3px;
+    margin-left: 2px;
+    background-color: #ffffff;
+    cursor: grab;
+    border: 1px solid #9d9db5;
+    border-radius: 5px;
+    z-index: 100;
+}
