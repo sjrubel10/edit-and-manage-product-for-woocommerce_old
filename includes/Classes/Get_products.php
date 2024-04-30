@@ -2,6 +2,8 @@
 
 namespace wooBEMP\Classes;
 
+use WP_Query;
+
 class Get_products
 {
     private $is_call;
@@ -241,14 +243,33 @@ class Get_products
         }else{
             $need_and = "";
         }
-        $query ="SELECT `ID` FROM `$post_table` AS p $filter_query_post_meta_join WHERE $already_loaded_remove_query $post_query $need_and $meta_query GROUP BY p.ID ORDER BY p.ID DESC LIMIT %d";
+        /*$query ="SELECT `ID` FROM `$post_table` AS p $filter_query_post_meta_join WHERE $already_loaded_remove_query $post_query $need_and $meta_query GROUP BY p.ID ORDER BY p.ID DESC LIMIT %d";
         $query = preg_replace('/\s+/', ' ', $query );
         $query = $wpdb->prepare( $query, $limit );
         $product_data = $wpdb->get_results( $query,ARRAY_A );
 
         $get_data_ids = array_column( $product_data, 'ID');
+
         if( count( $product_data )> 0 ){
             $product_data = $this->get_product_by_ids( $get_data_ids );
+        }*/
+
+        $product_data = $product_ids = array();
+        $args = array(
+            'post_type'      => 'product',
+            'posts_per_page' => 10, // Get all products
+            'post__not_in'   => $alreadyLoadedIds,
+        );
+        $products = new WP_Query( $args );
+        if ( $products->have_posts() ) {
+            while ( $products->have_posts() ) {
+                $products->the_post();
+                $product_ids[] = get_the_ID();
+            }
+            wp_reset_postdata(); // Reset post data
+        }
+        if( count( $product_ids )> 0 ){
+            $product_data = $this->get_product_by_ids( $product_ids );
         }
 
         return $product_data;
