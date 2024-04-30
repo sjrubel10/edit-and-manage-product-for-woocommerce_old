@@ -188,8 +188,8 @@ class Ajax {
             }else{
                 $loaded_ids = [];
             }
-
-            $products_data = $get_product_data_instance->get_search_data( $loaded_ids, $_POST );
+            $decodedString = urldecode( sanitize_text_field( $_POST['data_search'] ) );
+            $products_data = $get_product_data_instance->get_search_data( $loaded_ids, $decodedString );
             $current_loaded_ids = array_column( $products_data, 'id');
             $loaded_current_ids = array_merge( $loaded_ids, $current_loaded_ids);
 //            $loaded_current_str = serialize( $loaded_current_ids);

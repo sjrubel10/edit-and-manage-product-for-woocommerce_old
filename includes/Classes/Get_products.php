@@ -153,8 +153,9 @@ class Get_products
         return $join;
     }
 
-    public function get_search_data( $alreadyLoadedIds = [], $search_option = [] ){
+    public function get_search_data( $alreadyLoadedIds = [], $decodedString = [] ){
         global $wpdb ;
+
         $post_table = $wpdb->prefix."posts";
         $postmeta_table = $wpdb->prefix."postmeta";
         $limit = get_option('wooBEMP_per_batch_count');
@@ -164,12 +165,13 @@ class Get_products
 //        $limit = 10;
         $meta_query = '';
         $filter_query_post_meta_join = '';
-        if( is_array( $search_option ) && count( $search_option )> 0 && isset( $search_option['data_search'] )) {
-            $urlEncodedString = $search_option;
-            $decodedString = urldecode($urlEncodedString['data_search']);
+        if( !empty( $decodedString ) ) {
+//            $urlEncodedString = $search_option;
+            $decodedString = urldecode( $decodedString );
             $parsedArray = array();
             parse_str($decodedString, $parsedArray);
             $filter_option = array_values($parsedArray);
+
             $post_Table_column = array('post_title','post_content', 'ID', 'post_status', 'post_date');
             $filter_query_post = '';
             $filter_query_post_meta = '';
@@ -243,33 +245,39 @@ class Get_products
         }else{
             $need_and = "";
         }
-        /*$query ="SELECT `ID` FROM `$post_table` AS p $filter_query_post_meta_join WHERE $already_loaded_remove_query $post_query $need_and $meta_query GROUP BY p.ID ORDER BY p.ID DESC LIMIT %d";
-        $query = preg_replace('/\s+/', ' ', $query );
-        $query = $wpdb->prepare( $query, $limit );
-        $product_data = $wpdb->get_results( $query,ARRAY_A );
 
-        $get_data_ids = array_column( $product_data, 'ID');
 
-        if( count( $product_data )> 0 ){
-            $product_data = $this->get_product_by_ids( $get_data_ids );
-        }*/
+        if( 1===2 ){
+            /*$query ="SELECT `ID` FROM `$post_table` AS p $filter_query_post_meta_join WHERE $already_loaded_remove_query $post_query $need_and $meta_query GROUP BY p.ID ORDER BY p.ID DESC LIMIT %d";
+            $query = preg_replace('/\s+/', ' ', $query );
+            $query = $wpdb->prepare( $query, $limit );
+            $product_data = $wpdb->get_results( $query,ARRAY_A );
 
-        $product_data = $product_ids = array();
-        $args = array(
-            'post_type'      => 'product',
-            'posts_per_page' => 10, // Get all products
-            'post__not_in'   => $alreadyLoadedIds,
-        );
-        $products = new WP_Query( $args );
-        if ( $products->have_posts() ) {
-            while ( $products->have_posts() ) {
-                $products->the_post();
-                $product_ids[] = get_the_ID();
+            $get_data_ids = array_column( $product_data, 'ID');
+
+            if( count( $product_data )> 0 ){
+                $product_data = $this->get_product_by_ids( $get_data_ids );
+            }*/
+            $product_data = array();
+
+        } else{
+            $product_ids = array();
+            $args = array(
+                'post_type'      => 'product',
+                'posts_per_page' => $limit, // Get all products
+                'post__not_in'   => $alreadyLoadedIds,
+            );
+            $products = new WP_Query( $args );
+            if ( $products->have_posts() ) {
+                while ( $products->have_posts() ) {
+                    $products->the_post();
+                    $product_ids[] = get_the_ID();
+                }
+                wp_reset_postdata(); // Reset post data
             }
-            wp_reset_postdata(); // Reset post data
-        }
-        if( count( $product_ids )> 0 ){
-            $product_data = $this->get_product_by_ids( $product_ids );
+            if( count( $product_ids )> 0 ){
+                $product_data = $this->get_product_by_ids( $product_ids );
+            }
         }
 
         return $product_data;
