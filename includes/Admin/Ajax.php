@@ -55,6 +55,7 @@ class Ajax {
             $config_info_instance = new Bemp_config();
             $current_title_attributes = $config_info_instance->wooBEMP_config();
             $changed_column_title = CommonFunctions::sanitize_array_values( $_POST['column_attributes'] );
+//            $changed_column_title = array_map('sanitize_text_field', $_POST['column_attributes']);
 
             foreach ( $current_title_attributes as $key => $value){
                 if( in_array( $key, $changed_column_title )){

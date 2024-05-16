@@ -162,7 +162,6 @@ class Get_products
         if( !$limit ){
             $limit = 10;
         }
-//        $limit = 10;
         $meta_query = '';
         $filter_query_post_meta_join = '';
         if( !empty( $decodedString ) ) {
