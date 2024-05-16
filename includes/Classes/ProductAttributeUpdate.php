@@ -8,18 +8,6 @@
 
 namespace wooBEMP\Classes;
 
-$conditions = array(
-    ''          => __( 'Select Condition' ),
-    '=='        => __( 'is / equal', 'woo-feed' ),
-    '!='        => __( 'is not / not equal', 'woo-feed' ),
-    '>='        => __( 'equals or greater than', 'woo-feed' ),
-    '>'         => __( 'greater than', 'woo-feed' ),
-    '<='        => __( 'equals or less than', 'woo-feed' ),
-    '<'         => __( 'less than', 'woo-feed' ),
-    'contains'  => __( 'contains', 'woo-feed' ),
-    'nContains' => __( 'does not contain', 'woo-feed' ),
-    'between'   => __( 'between', 'woo-feed' ),
-);
 
 class ProductAttributeUpdate
 {

@@ -1,19 +1,21 @@
 <?php
-/*
-  Plugin Name: Edit and Manage Product for WooCommerce
-  Plugin URI: https://wooBEMP-editor.com/
-  Description:BEMP: Simplify WooCommerce product management. Bulk edit and manage with ease. Save time, streamline your store.
-  Requires at least: WP 4.9
-  Tested up to: WP 6.3
-  Author: sjrubel10
-  Author URI: https://profiles.wordpress.org/sjrubel10/
-  Version: 1.0.0
-  Requires PHP: 7.4
-  Tags: woocommerce,woocommerce bulk edit,bulk edit,bulk,products editor, manage product
-  Text Domain: edit-and-manage-product-for-woocommerce
-  Domain Path: /languages
-  WC requires at least: 3.6
-  WC tested up to: 8.1.0
+/**
+ * Plugin Name:  Edit and Manage Product for WooCommerce
+ * Plugin URI:   https://wooBEMP-editor.com/
+ * Description:  BEMP: Simplify WooCommerce product management. Bulk edit and manage with ease. Save time, streamline your store.
+ * Requires at least: 4.9
+ * Tested up to:  6.5
+ * Author:       sjrubel10
+ * Author URI:   https://profiles.wordpress.org/sjrubel10/
+ * Version:      1.0.0
+ * License:      GPL v2 or later
+ * License URI:  http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * Requires PHP: 7.4
+ * Tags: woocommerce, products, editor, manager, product bulk editor
+ * Text Domain: edit-and-manage-product-for-woocommerce
+ * Domain Path: /languages
+ * WC requires at least: 3.6
+ * WC tested up to: 8.8
  */
 
 if (!defined('ABSPATH')) {

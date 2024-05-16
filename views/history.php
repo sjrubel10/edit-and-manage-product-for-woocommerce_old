@@ -74,11 +74,11 @@
 
 </style>
 
-<div class="wooBEMPhistoryHolder" id="wooBEMPhistoryHolder">
-    <h2 class=""><?php echo esc_html__('Your Updated History' )?></h2>
+<!--<div class="wooBEMPhistoryHolder" id="wooBEMPhistoryHolder">
+    <h2 class=""><?php /*echo esc_html__('Your Updated History' )*/?></h2>
     <div class="wooBEMPshowhistory" id="wooBEMPshowhistory"></div>
-    <div class="wooBEMPshowhistoryLoading" id="wooBEMPshowhistoryLoading"><?php echo esc_html__('Loading...')?></div>
-</div>
+    <div class="wooBEMPshowhistoryLoading" id="wooBEMPshowhistoryLoading"><?php /*echo esc_html__('Loading...')*/?></div>
+</div>-->
 
 <script !src="">
     var is_loaded = 0;
