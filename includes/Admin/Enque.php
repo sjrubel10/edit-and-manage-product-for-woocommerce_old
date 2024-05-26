@@ -23,6 +23,7 @@ class Enque
     public function include_js_files()
     {
         wp_enqueue_script('wooBENP_edit_product',WOOBEMP_ASSETS_LINK . 'js/commonjsfunction.js' );
+        wp_enqueue_script('wooBENP_edit_products',WOOBEMP_ASSETS_LINK . 'js/productsedit.js' );
     }
 
     public function include_all_files()
