@@ -55,6 +55,7 @@ class Ajax {
             $config_info_instance = new Bemp_config();
             $current_title_attributes = $config_info_instance->wooBEMP_config();
             $changed_column_title = CommonFunctions::sanitize_array_values( $_POST['column_attributes'] );
+//            $changed_column_title = array_map('sanitize_text_field', $_POST['column_attributes']);
 
             foreach ( $current_title_attributes as $key => $value){
                 if( in_array( $key, $changed_column_title )){
@@ -188,12 +189,20 @@ class Ajax {
             }else{
                 $loaded_ids = [];
             }
+            $decodedString = urldecode( sanitize_text_field( $_POST['data_search'] ) );
+            $products_data = $get_product_data_instance->get_search_data( $loaded_ids, $decodedString );
+//            error_log( print_r( ['$products_data'=>$products_data], true ) );
+            if( is_array( $products_data ) && count( $products_data ) > 0 ){
+                $current_loaded_ids = array_column( $products_data, 'id');
+                $loaded_current_ids = array_merge( $loaded_ids, $current_loaded_ids);
+                $loaded_current_str = implode( " ,", $loaded_current_ids);
+            }else{
+                $products_data = [];
+                $loaded_current_str = '';
+            }
 
-            $products_data = $get_product_data_instance->get_search_data( $loaded_ids, $_POST );
-            $current_loaded_ids = array_column( $products_data, 'id');
-            $loaded_current_ids = array_merge( $loaded_ids, $current_loaded_ids);
 //            $loaded_current_str = serialize( $loaded_current_ids);
-            $loaded_current_str = implode( " ,", $loaded_current_ids);
+
             $result = array(
                 'type' => 'success',
                 'product_data' => array( $products_data ),

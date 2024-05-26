@@ -2,7 +2,7 @@
 Contributors: sjrubel10
 Tags: woocommerce, products, editor, manager
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 6.5
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
