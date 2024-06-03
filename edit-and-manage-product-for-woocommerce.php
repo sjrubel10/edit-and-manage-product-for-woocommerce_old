@@ -92,10 +92,6 @@ final class WOOBEMP {
         require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
         dbDelta( $sql );
     }*/
-
-//    public function deactivate() {
-//        error_log( print_r( "Deactivation", true ) );
-//    }
     public function activate() {
         update_option( 'woobemp_version', WOOBEMP_VERSION );
         global $wpdb;
