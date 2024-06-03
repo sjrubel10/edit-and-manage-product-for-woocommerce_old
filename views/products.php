@@ -27,7 +27,6 @@ if( count( $products_data ) > 0 ){
     }
 }
 $nonce = wp_create_nonce('wooBEMPNonceCheck' );
-
 ?>
 <body>
     <div class="wooBEMP_clasic_editor_holder" style="display: none">
