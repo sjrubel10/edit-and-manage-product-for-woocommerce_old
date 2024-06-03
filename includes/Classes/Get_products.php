@@ -320,7 +320,8 @@ class Get_products
                 }
 
                 if( isset( $product_array['_thumbnail_id'])){
-                    $product_array['image_link'] = get_the_post_thumbnail_url( $product_array['_thumbnail_id'] );
+                    $product_array['image_link'] = wp_get_attachment_url( $product_array['_thumbnail_id'] );
+//                    $product_array['image_link'] = wp_get_attachment_url( isset( $product_array['_thumbnail_id'] ) ? $product_array['_thumbnail_id'] : "" );;
                 }
 
                 $visibility = $product->get_catalog_visibility();

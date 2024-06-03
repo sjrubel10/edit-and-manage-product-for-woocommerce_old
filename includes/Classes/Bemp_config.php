@@ -7,11 +7,13 @@ class Bemp_config
 
     public function wooBEMP_config(){
 
-        $config = maybe_unserialize(get_option('wooBEMP_column_settings'));
+        $config = "";
+        $config = maybe_unserialize( get_option( 'wooBEMP_column_settings' ) );
         if( !$config ){
             $config = array(
                 "productID" => 'block',
                 "productTitle" => 'block',
+                "wooBEMP_productImage" => 'block',
                 "productDesc" => 'block',
                 "productShhortDesc" => 'block',
                 "productType" => 'block',
@@ -53,10 +55,11 @@ class Bemp_config
         return $productinfoIds;
     }
 
- public function product_table_header(){
+    public function product_table_header(){
         $headers = array(
             "productID" => esc_html__('ID', 'edit-and-manage-product-for-woocommerce' ),
             "productTitle" => esc_html__('Title', 'edit-and-manage-product-for-woocommerce' ),
+            "wooBEMP_productImage" => esc_html__('Upload Image', 'edit-and-manage-product-for-woocommerce' ),
             "productDesc" => esc_html__('Description', 'edit-and-manage-product-for-woocommerce' ),
             "productShhortDesc" => esc_html__('Short Desc..', 'edit-and-manage-product-for-woocommerce' ),
             "productType" => esc_html__('Type', 'edit-and-manage-product-for-woocommerce' ),

@@ -54,6 +54,7 @@ function update_product_attributes_by_click(  product_id, newProductAttributeVal
 function display_filter_data( product_info_data ) {
 
     let product_data = product_info_data['product_data'][0];
+    // console.log( product_data );
     let config = product_info_data['wooBEMP_config'][0];
     let length = product_data.length;
     let display_limit = jQuery("#wooBEMPLimitText").text();
@@ -120,6 +121,15 @@ function display_filter_data( product_info_data ) {
             var titleFieldShow = '<td class="productTitle_width wooBEMOtd"><div id="wooBEMP_productTitle-'+product_data[i]['id']+'" class="textareafield wooBEMP_productAttribute wooBEMP_productAttributeOption">'+product_data[i]['name']+'</div></td>';
         }else {
             titleFieldShow = '';
+        }
+        if( config['wooBEMP_productImage'] === 'block'){
+            var imageFieldShow = '<td class="wooBEMOtd">\
+                                              <div id="wooBEMP_productImage-'+product_data[i]['id']+'" class="">\
+                                                   <div id="upload_image_button-'+product_data[i]['id']+'" class="button upload_image_button" ><img style="width: 50px" src="'+product_data[i]['image_link']+'" alt="'+product_data[i]['name']+'"></div>\
+                                               </div>\
+                                           </td>';
+        }else {
+            imageFieldShow = '';
         }
 
         if( config['productDesc'] === 'block'){
@@ -217,6 +227,7 @@ function display_filter_data( product_info_data ) {
             '<tr id="'+product_data[i]['id']+'">' +
             idFieldShow +
             titleFieldShow +
+            imageFieldShow +
             descFieldShow +
             shoetDescFieldShow +
             typeFieldShow +
