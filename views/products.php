@@ -54,7 +54,7 @@ $nonce = wp_create_nonce('wooBEMPNonceCheck' );
         <div class="wooBEMPcontainerHolder" id="wooBEMPcontainerHolder">
             <div class="wooBEMPEditPodctHolder" id="wooBEMPEditPodctHolder">
                 <div class="filteholder">
-<!--                    --><?php //include "productfilter.php";?>
+                    <?php include "productfilter.php";?>
                 </div>
                 <div class="wooBEMPLimitTextHolder">
 <!--                    <span class="wooBEMP-limit-text" id="wooBEMPLimitText">--><?php //echo esc_html( $limit ); ?><!--</span>-->
@@ -300,7 +300,7 @@ $nonce = wp_create_nonce('wooBEMPNonceCheck' );
             </div>
 
             <div class="wooBEMPHistoryHolder" id="wooBEMPHistoryHolder" style="display: none">
-<!--                --><?php //include_once "history.php"?>
+                <?php include_once "history.php"?>
             </div>
         </div>
     </div>

@@ -77,7 +77,7 @@ $searchValue = array( );
     //    This Section is for make search Drop Down Menu
 
         let searchFields_ary = <?php echo wp_json_encode( $searchFields ); ?>;
-        let product_categories = <?php echo wp_json_encode( $product_categories ); ?>;
+        //let product_categories = <?php //echo wp_json_encode( $product_categories ); ?>//;
         let  fields = [];
         jQuery.each(searchFields_ary, function( index, item ) {
             let field  = '<option value="'+index+'">'+item+'</option>';
